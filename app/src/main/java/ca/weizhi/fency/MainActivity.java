@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.os.Build;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import com.navnas.barcodereader.R;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -97,6 +100,20 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        ArrayList<Card> cardArrayList=new ArrayList<>();
+
+        cardArrayList.add(new Card(1,"12345","Metro"));
+
+        cardArrayList.add(new Card(2,"12345","Metro"));
+
+
+        cardArrayList.add(new Card(3,"12345","Metro"));
+
+
+        CardAdapter cardAdapter = new CardAdapter(this,cardArrayList );
+        ListView  listView=findViewById(R.id.cards_list_view);
+        listView.setAdapter(cardAdapter);
+
 
 
 
@@ -116,5 +133,8 @@ public class MainActivity extends AppCompatActivity {
 //            mLocationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
 //        }
 //    }
+
+
+
 
 }
