@@ -105,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/KeyCodeUnlock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
+            <state relative-caret-position="59">
+              <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
             </state>
           </provider>
         </entry>
@@ -123,13 +123,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="97" column="9" selection-start-line="91" selection-start-column="8" selection-end-line="97" selection-end-column="9" />
+            <state relative-caret-position="321">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -149,6 +152,7 @@
     <option name="width" value="1440" />
     <option name="height" value="797" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <hideEmptyPackages AndroidView="false" />
@@ -374,15 +378,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="97" column="9" selection-start-line="91" selection-start-column="8" selection-end-line="97" selection-end-column="9" />
+        <state relative-caret-position="321">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/KeyCodeUnlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="237" lean-forward="true" selection-start-line="237" selection-end-line="237" />
+        <state relative-caret-position="59">
+          <caret line="222" lean-forward="true" selection-start-line="222" selection-end-line="222" />
         </state>
       </provider>
     </entry>
