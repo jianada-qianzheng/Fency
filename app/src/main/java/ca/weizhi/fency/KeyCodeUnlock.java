@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
@@ -226,20 +227,51 @@ public class KeyCodeUnlock extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         // TODO Auto-generated method stub
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForeground(1, buildForegroundNotification());//make it as foreground service, will not be killed
-
-        } else {
-
-            //startForeground(1, buildForegroundNotification());//make it as foreground service, will not be killed
-
-
-        }
+        startMyOwnForeground();
 
 
 
         return super.onStartCommand(intent, flags, startId);
     }
+
+
+    private void startMyOwnForeground(){
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            Log.i("keyCodeUnlock","29");
+
+            String NOTIFICATION_CHANNEL_ID = "com.example.simpleapp";
+            String channelName = "My Background Service";
+            NotificationChannel chan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, channelName, NotificationManager.IMPORTANCE_NONE);
+            chan.setLightColor(Color.BLUE);
+            chan.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
+            NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            assert manager != null;
+            manager.createNotificationChannel(chan);
+
+            NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
+            Notification notification = notificationBuilder.setOngoing(true)
+                    .setSmallIcon(R.drawable.ic_launcher_background)
+                    .setContentTitle("App is running in background")
+                    .setPriority(NotificationManager.IMPORTANCE_MIN)
+                    .setCategory(Notification.CATEGORY_SERVICE)
+                    .build();
+            startForeground(2, notification);
+
+            //startForeground(1, buildForegroundNotification());//make it as foreground service, will not be killed
+
+        } else {
+
+            Log.i("keyCodeUnlock","24");
+
+            startForeground(1, buildForegroundNotification());//make it as foreground service, will not be killed
+
+
+        }
+
+
+    }
+
 //    //home键
 //    private final BroadcastReceiver homePressReceiver = new BroadcastReceiver() {
 //        final String SYSTEM_DIALOG_REASON_KEY = "reason";
