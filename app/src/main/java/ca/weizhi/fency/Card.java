@@ -1,3 +1,4 @@
+//this object is the card show on Main activity screen. Every store has a card. for example, metro has a metro memebership card
 package ca.weizhi.fency;
 
 public class Card {
@@ -6,7 +7,7 @@ public class Card {
 
     String storeName;
 
-    public  Card(int id,String barcode,String storeName){
+    public  Card(int id,String storeName,String barcode){
         this.id=id;
         this.barcode=barcode;
         this.storeName=storeName;

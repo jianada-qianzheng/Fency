@@ -1,3 +1,5 @@
+//this service started by main activity after the application started
+
 package ca.weizhi.fency;
 
 
@@ -264,7 +266,7 @@ public class KeyCodeUnlock extends Service {
 
             Log.i("keyCodeUnlock","24");
 
-            startForeground(1, buildForegroundNotification());//make it as foreground service, will not be killed
+            //startForeground(1, buildForegroundNotification());//make it as foreground service, will not be killed
 
 
         }

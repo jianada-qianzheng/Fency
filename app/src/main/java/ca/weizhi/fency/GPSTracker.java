@@ -1,3 +1,5 @@
+//location
+
 package ca.weizhi.fency;
 
 import android.annotation.SuppressLint;

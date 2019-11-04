@@ -1,4 +1,8 @@
+
+//this class can transfer the string to barcode
+
 package ca.weizhi.fency;
+
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;

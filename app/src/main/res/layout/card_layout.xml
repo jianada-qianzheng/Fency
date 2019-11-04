@@ -9,30 +9,44 @@
 
     <ImageView
         android:id="@+id/logo_img"
-        android:layout_width="93dp"
-        android:layout_height="610dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="634dp"
+        android:layout_width="128dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/barcode_img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021"
+        app:layout_constraintVertical_bias="0.03"
         app:srcCompat="@android:drawable/ic_lock_lock" />
 
     <ImageView
         android:id="@+id/barcode_img"
         android:layout_width="209dp"
-        android:layout_height="669dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="73dp"
-        android:layout_marginBottom="638dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/logo_img"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035"
         app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <TextView
+        android:id="@+id/addView"
+        android:layout_width="158dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/logo_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo_img"
+        app:layout_constraintTop_toTopOf="@+id/logo_img" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

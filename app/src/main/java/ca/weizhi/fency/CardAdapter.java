@@ -1,7 +1,9 @@
 package ca.weizhi.fency;
 
 import android.app.Activity;
+import android.content.pm.ApplicationInfo;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,28 +51,30 @@ public class CardAdapter extends ArrayAdapter {
         View rowView= inflater.inflate(R.layout.card_layout, null, true);
         ImageView logoView = (ImageView) rowView.findViewById(R.id.logo_img);
 
+        logoView.setImageBitmap(getBitmapByName(cardArrayList.get(position).getStoreName().toLowerCase()));
+
+
         ImageView barcodeView=(ImageView) rowView.findViewById(R.id.barcode_img);
+
+        TextView addView=rowView.findViewById(R.id.addView);
 
         if(cardArrayList.get(position).getBarcode().equals("")){
 
-            Bitmap bitm=null;
-            Ecoad ecc=new Ecoad(120, 40);
-            try {
-                bitm=ecc.bitmap1("012345");
-            } catch (Exception e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+            addView.setVisibility(View.VISIBLE);
 
-            barcodeView.setImageBitmap(bitm);
+            barcodeView.setVisibility(View.GONE);
+
+            addView.setText("Add Card");
 
         }else{
+            addView.setVisibility(View.GONE);
 
+            barcodeView.setVisibility(View.VISIBLE);
 
             Bitmap bitm=null;
             Ecoad ecc=new Ecoad(120, 40);
             try {
-                bitm=ecc.bitmap1("012345");
+                bitm=ecc.bitmap1(cardArrayList.get(position).getBarcode());
             } catch (Exception e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -80,9 +84,20 @@ public class CardAdapter extends ArrayAdapter {
 
         }
 
+
+
+
+
         //logoView.setImageResource(imageId[position]);
 
         return rowView;
     }
+
+    public Bitmap getBitmapByName(String name) {
+        ApplicationInfo appInfo = context.getApplicationInfo();
+        int resID = context.getResources().getIdentifier(name, "drawable", appInfo.packageName);
+        return BitmapFactory.decodeResource(context.getResources(), resID);
+    }
+
 
 }

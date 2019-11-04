@@ -1,3 +1,5 @@
+//this service started when power source button pressed
+
 package ca.weizhi.fency;
 
 import android.app.Notification;
@@ -264,6 +266,10 @@ public class LocationService extends Service {
             // Using RemoteViews to bind custom layouts into Notification
             RemoteViews remoteViews = new RemoteViews(getPackageName(),
                     R.layout.custom_push);
+
+
+            //get BARCODE FROM SQLITE
+
 
 
 

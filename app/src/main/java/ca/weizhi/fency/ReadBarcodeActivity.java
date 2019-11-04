@@ -1,3 +1,5 @@
+//read the barcode using camera and transfter barcode to string.
+
 package ca.weizhi.fency;
 
 import android.content.DialogInterface;
@@ -24,10 +26,15 @@ public class ReadBarcodeActivity extends AppCompatActivity implements ZXingScann
     private static final int REQUEST_CAMERA = 1;
     private ZXingScannerView scannerView;
 //    private static int camId = Camera.CameraInfo.CAMERA_FACING_BACK;
+    private int storeId;
+    private  int backActivity ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        storeId=getIntent().getIntExtra("storeId",0);
 
         scannerView = new ZXingScannerView(this);
         setContentView(scannerView);
@@ -125,32 +132,51 @@ public class ReadBarcodeActivity extends AppCompatActivity implements ZXingScann
 
     @Override
     public void handleResult(Result result) {
-        final String myResult = result.getText();
-        Log.d("QRCodeScanner", result.getText());
-        Log.d("QRCodeScanner", result.getBarcodeFormat().toString());
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Scan Result");
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                scannerView.resumeCameraPreview(ReadBarcodeActivity.this);
-            }
-        });
-        builder.setNeutralButton("Visit", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                if(myResult.contains("http")){
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(myResult));
-                startActivity(browserIntent);}
-                else{
-                    Toast.makeText(ReadBarcodeActivity.this, "the barcode contains numbers only, no website to visit!",
-                            Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-        builder.setMessage(result.getText());
-        AlertDialog alert1 = builder.create();
-        alert1.show();
+        CustomSQLiteOpenHelper customSQLiteOpenHelper=new CustomSQLiteOpenHelper(this);
+        customSQLiteOpenHelper.insertBarcode(storeId,result.getText());
+
+
+
+        if(backActivity==0){
+
+            Intent intent = new Intent(this,MainActivity.class);
+
+            startActivity(intent);
+
+
+        }
+
+
+
+
+
+//        final String myResult = result.getText();
+//        Log.d("QRCodeScanner", result.getText());
+//        Log.d("QRCodeScanner", result.getBarcodeFormat().toString());
+//
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        builder.setTitle("Scan Result");
+//        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                scannerView.resumeCameraPreview(ReadBarcodeActivity.this);
+//            }
+//        });
+//        builder.setNeutralButton("Visit", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                if(myResult.contains("http")){
+//                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(myResult));
+//                startActivity(browserIntent);}
+//                else{
+//                    Toast.makeText(ReadBarcodeActivity.this, "the barcode contains numbers only, no website to visit!",
+//                            Toast.LENGTH_LONG).show();
+//                }
+//            }
+//        });
+//        builder.setMessage(result.getText());
+//        AlertDialog alert1 = builder.create();
+//        alert1.show();
     }
 }

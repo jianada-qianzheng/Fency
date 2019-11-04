@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Build;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.navnas.barcodereader.R;
@@ -11,6 +13,11 @@ import com.navnas.barcodereader.R;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    ArrayList<Card> cardArrayList;
+
+    CustomSQLiteOpenHelper customSQLiteOpenHelper;
 
 //    private static final String TAG = "MyLocationService";
 //    private LocationManager mLocationManager = null;
@@ -100,19 +107,40 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        ArrayList<Card> cardArrayList=new ArrayList<>();
-
-        cardArrayList.add(new Card(1,"12345","Metro"));
-
-        cardArrayList.add(new Card(2,"12345","Metro"));
 
 
-        cardArrayList.add(new Card(3,"12345","Metro"));
+        customSQLiteOpenHelper=new CustomSQLiteOpenHelper(this);
+
+        cardArrayList=customSQLiteOpenHelper.getCards();
+
+
+
+
 
 
         CardAdapter cardAdapter = new CardAdapter(this,cardArrayList );
+
         ListView  listView=findViewById(R.id.cards_list_view);
+
         listView.setAdapter(cardAdapter);
+
+
+        //Intent intentReadBarcode = new Intent(this,ReadBarcodeActivity.class);
+
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(),ReadBarcodeActivity.class);
+
+                intent.putExtra("storeId",cardArrayList.get(i).getId());
+                intent.putExtra("backActivity",0);//after read go back to main activity
+
+
+                startActivity(intent);
+            }
+        });
 
 
 
