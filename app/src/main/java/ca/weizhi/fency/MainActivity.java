@@ -1,6 +1,7 @@
 package ca.weizhi.fency;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -58,7 +59,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        DataBaseHelper dbhelper = new DataBaseHelper(getApplicationContext());
 
+
+        SQLiteDatabase db = dbhelper.getWritableDatabase();
 
 
 

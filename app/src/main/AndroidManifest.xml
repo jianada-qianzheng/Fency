@@ -40,10 +40,7 @@
             android:label="KeyCodeUnlock" >
         </service>
 
-        <service
-            android:name="ca.weizhi.fency.LocationService"
-            android:label="LocationService" >
-        </service>
+
     </application>
 
 </manifest>
