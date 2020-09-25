@@ -57,33 +57,7 @@
     <last-search-timestamp>1572128424809</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de6c9325-f97d-46cb-b942-8c48c031a821" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/Ecoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/BarcodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/GPSTracker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/KeyCodeUnlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/ButtonDetectService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/LocationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ca/weizhi/fency/MainActivity.java" afterDir="false" />
-    </list>
+    <list default="true" id="de6c9325-f97d-46cb-b942-8c48c031a821" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599180185575</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="This version has display the logo and barcode successfully.&#10;&#10;Next step, I could clean the code and make the code tidy.">
+      <created>1601006016828</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601006016828</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -234,10 +215,10 @@
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state x="458" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.-10.1920.1057/0.23.1440.795@0.23.1440.795" timestamp="1598918483163" />
-    <state x="266" y="23" key="CommitChangelistDialog2" timestamp="1601006015234">
+    <state x="266" y="23" key="CommitChangelistDialog2" timestamp="1601006056523">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
-    <state x="266" y="23" key="CommitChangelistDialog2/-1920.-10.1920.1057/0.23.1440.808@0.23.1440.808" timestamp="1601006015233" />
+    <state x="266" y="23" key="CommitChangelistDialog2/-1920.-10.1920.1057/0.23.1440.808@0.23.1440.808" timestamp="1601006056523" />
     <state x="266" y="23" key="CommitChangelistDialog2/0.23.1440.795@0.23.1440.795" timestamp="1599180184532" />
     <state width="1358" height="223" key="GridCell.Tab.0.bottom" timestamp="1600973367155">
       <screen x="0" y="23" width="1440" height="877" />
