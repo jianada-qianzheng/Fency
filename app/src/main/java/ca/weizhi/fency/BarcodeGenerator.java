@@ -7,10 +7,10 @@ import com.google.zxing.common.BitMatrix;
 import android.graphics.Bitmap;
 
 //绘制图片
-public class Ecoad {
+public class BarcodeGenerator {
     private int width;
     private int height;
-    public Ecoad(int width,int height){
+    public BarcodeGenerator(int width, int height){
         this.width=width;
         this.height=height;
     }

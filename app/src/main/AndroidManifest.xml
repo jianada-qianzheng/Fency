@@ -36,7 +36,7 @@
         </activity>
 
         <service
-            android:name="ca.weizhi.fency.KeyCodeUnlock"
+            android:name="ca.weizhi.fency.ButtonDetectService"
             android:label="KeyCodeUnlock" >
         </service>
 

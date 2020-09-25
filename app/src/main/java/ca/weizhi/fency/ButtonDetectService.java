@@ -12,12 +12,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
-import android.content.res.AssetManager;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteCursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Icon;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
@@ -36,7 +33,7 @@ import com.navnas.barcodereader.R;
  * @author yu_longji
  *
  */
-public class KeyCodeUnlock extends Service {
+public class ButtonDetectService extends Service {
 
     private static final String TAG = "MyLocationService";
     private LocationManager mLocationManager = null;
@@ -45,7 +42,7 @@ public class KeyCodeUnlock extends Service {
 
     private Location mLastLocation;
 
-    private Double latitude ;
+    private Double latitude;
     private Double longitude;
 
     private String storeName;
@@ -91,9 +88,6 @@ public class KeyCodeUnlock extends Service {
     LocationListener[] mLocationListeners = new LocationListener[]{
             new LocationListener(LocationManager.PASSIVE_PROVIDER)
     };
-
-
-
 
 
     @Override
@@ -247,7 +241,7 @@ public class KeyCodeUnlock extends Service {
 
         } else {
 
-            //startForeground(1, buildForegroundNotification());//make it as foreground service, will not be killed
+            startForeground(1, buildForegroundNotification());//make it as foreground service, will not be killed
 
 
         }
@@ -302,7 +296,9 @@ public class KeyCodeUnlock extends Service {
                 //Log.i("database",""+info);
 
 
-                CustomNotification(context,"12345678901234-099");
+                //CustomNotification(context,"12345678901234-099");
+
+                ca.weizhi.fency.Notification.pushNotification("Loyalty",1,"12345678901234-099",context);
 
 
 
@@ -422,7 +418,7 @@ public class KeyCodeUnlock extends Service {
         //remoteViews.setTextViewText(R.id.textView,longitude+"/"+latitude);
 
         Bitmap bitm=null;
-        Ecoad ecc=new Ecoad(120, 40);
+        BarcodeGenerator ecc=new BarcodeGenerator(120, 40);
         try {
             bitm=ecc.bitmap1(message);
         } catch (Exception e) {
@@ -464,7 +460,7 @@ public class KeyCodeUnlock extends Service {
 
 
     private void getLocation() {
-        GPSTracker gps = new GPSTracker(this);
+        LocationService gps = new LocationService(this);
         if (gps.canGetLocation()) {
 
             latitude = gps.getLatitude();

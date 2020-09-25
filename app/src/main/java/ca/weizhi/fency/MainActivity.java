@@ -5,10 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.navnas.barcodereader.R;
 
 public class MainActivity extends AppCompatActivity {
+
+    String TAG = "MainActivity";
 
 //    private static final String TAG = "MyLocationService";
 //    private LocationManager mLocationManager = null;
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.i(TAG,"onCreate");
+
         DataBaseHelper dbhelper = new DataBaseHelper(getApplicationContext());
 
 
@@ -91,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Intent intent = new Intent(this, KeyCodeUnlock.class);
+        Intent intent = new Intent(this, ButtonDetectService.class);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForegroundService(intent);
@@ -106,19 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onDestroy() {
-        // TODO Auto-generated method stub
-        super.onDestroy();
-//        Intent intent = new Intent(MainActivity.this, KeyCodeUnlock.class);
-//        stopService(intent);
-    }
 
-//    private void initializeLocationManager() {
-//        Log.e(TAG, "initializeLocationManager - LOCATION_INTERVAL: "+ LOCATION_INTERVAL + " LOCATION_DISTANCE: " + LOCATION_DISTANCE);
-//        if (mLocationManager == null) {
-//            mLocationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
-//        }
-//    }
 
 }
