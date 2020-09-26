@@ -57,7 +57,10 @@
     <last-search-timestamp>1572128424809</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de6c9325-f97d-46cb-b942-8c48c031a821" name="Default Changelist" comment="" />
+    <list default="true" id="de6c9325-f97d-46cb-b942-8c48c031a821" name="Default Changelist" comment="This version has display the logo and barcode successfully.&#10;&#10;Next step, I could clean the code and make the code tidy.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +106,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="device.picker.selection" value="Pixel_2_API_29_2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/assets" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1600955358733" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1601091219033" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
@@ -203,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601006016828</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="This version has display the logo and barcode successfully.&#10;&#10;Next step, I could clean the code and make the code tidy.">
+      <created>1601006064062</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601006064062</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -215,10 +225,11 @@
       <screen x="0" y="23" width="1440" height="795" />
     </state>
     <state x="458" y="174" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.-10.1920.1057/0.23.1440.795@0.23.1440.795" timestamp="1598918483163" />
-    <state x="266" y="23" key="CommitChangelistDialog2" timestamp="1601006056523">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="266" y="23" key="CommitChangelistDialog2" timestamp="1601091986799">
+      <screen x="0" y="23" width="1440" height="798" />
     </state>
-    <state x="266" y="23" key="CommitChangelistDialog2/-1920.-10.1920.1057/0.23.1440.808@0.23.1440.808" timestamp="1601006056523" />
+    <state x="266" y="23" key="CommitChangelistDialog2/-1920.-10.1920.1057/0.23.1440.798@0.23.1440.798" timestamp="1601091986799" />
+    <state x="266" y="23" key="CommitChangelistDialog2/-1920.-10.1920.1057/0.23.1440.808@0.23.1440.808" timestamp="1601006063811" />
     <state x="266" y="23" key="CommitChangelistDialog2/0.23.1440.795@0.23.1440.795" timestamp="1599180184532" />
     <state width="1358" height="223" key="GridCell.Tab.0.bottom" timestamp="1600973367155">
       <screen x="0" y="23" width="1440" height="877" />
@@ -260,11 +271,12 @@
     <state width="1358" height="223" key="GridCell.Tab.0.right/-1920.-10.1920.1057/0.23.1440.804@0.23.1440.804" timestamp="1600959955198" />
     <state width="1358" height="2" key="GridCell.Tab.0.right/-1920.-10.1920.962/0.23.1440.877@0.23.1440.877" timestamp="1598911487016" />
     <state width="1358" height="223" key="GridCell.Tab.0.right/-1920.-10.1920.967/0.23.1440.877@0.23.1440.877" timestamp="1600973367155" />
-    <state x="386" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1600955248022">
+    <state x="386" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1601091945628">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
     <state x="386" y="270" key="com.intellij.ide.util.TipDialog/-1920.-10.1920.1057/0.23.1440.792@0.23.1440.792" timestamp="1599176857111" />
     <state x="386" y="272" key="com.intellij.ide.util.TipDialog/-1920.-10.1920.1057/0.23.1440.795@0.23.1440.795" timestamp="1599174057267" />
+    <state x="386" y="272" key="com.intellij.ide.util.TipDialog/-1920.-10.1920.1057/0.23.1440.798@0.23.1440.798" timestamp="1601091945628" />
     <state x="386" y="297" key="com.intellij.ide.util.TipDialog/-1920.-10.1920.962/0.23.1440.877@0.23.1440.877" timestamp="1599438004738" />
     <state x="386" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.792@0.23.1440.792" timestamp="1599178642353" />
     <state x="386" y="272" key="com.intellij.ide.util.TipDialog/0.23.1440.798@0.23.1440.798" timestamp="1600955248022" />
